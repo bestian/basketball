@@ -19,8 +19,8 @@
     <div id = "ball" v-show = "!showDunk">
       <img src="../assets/ball.png" :style = "{top: dy + 'px', left:dx +'px', transform: 'scale(' + size +')'}" :class = "{shoot: sh}" @click = "stop()"/>
     </div>
-    <img class="big right avatar" src = "../assets/流川.jpeg" :class = "{active: player == 0}"/>
-    <img class="big left avatar" src = "../assets/櫻木.jpeg" :class = "{active: player == 1}" />
+    <img class="big right avatar" src = "../assets/流川.jpeg" :class = "{active: player == 0}" @click = "dunk()"/>
+    <img class="big left avatar" src = "../assets/櫻木.jpeg" :class = "{active: player == 1}" @click = "dunk()"/>
   </div>
 </template>
 
