@@ -8,6 +8,7 @@
         src: 'https://bestian.github.io/basketball/happy.mp3'
       }"
       />
+      <span>點擊籃球或按空白鍵</span>
     </nav>
     <router-view/>
   </div>

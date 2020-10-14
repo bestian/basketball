@@ -3,10 +3,10 @@
     <div id = "score">
       <h3>
         <img class="mini avatar" src = "../assets/流川.jpeg" :class = "{active: player == 0}"/>
-        投{{balls[0]}}中{{score[0] / 2}}: {{score[0]}}分
-        <br/>
+        <span :class = "{active: player == 0}">投{{balls[0]}}中{{score[0] / 2}}: {{score[0]}}分</span>
+        <br class="thin-only" />
         <img class="mini avatar" src = "../assets/櫻木.jpeg" :class = "{active: player == 1}" />
-        投{{balls[1]}}中{{score[1] / 2}}: {{score[1]}}分
+        <span :class = "{active: player == 1}">投{{balls[1]}}中{{score[1] / 2}}: {{score[1]}}分</span>
       </h3>
     </div>
     <div id = "dunk" v-if = "showDunk">
@@ -157,6 +157,12 @@ export default {
   }
 }
 
+@media screen and (min-width: 600px) {
+  .thin-only {
+    display: none;
+  }
+}
+
 #basket, #ball, #dunk {
   position: fixed;
   top: 0;
@@ -174,6 +180,7 @@ export default {
 
 #ball img {
   width: 100px;
+  cursor: pointer;
 }
 
 #dunk img {
@@ -185,6 +192,7 @@ export default {
 }
 
 .mini.avatar {
+  margin-left: 2em;
   height: 1em;
 }
 
@@ -192,6 +200,7 @@ export default {
   position: fixed;
   bottom: 0;
   width: 25vw;
+  cursor: pointer;
 }
 
 .right {
@@ -204,6 +213,11 @@ export default {
 
 .active.avatar {
   border: 5px ridge gold;
+}
+
+span.active {
+  color: red;
+  font-weight: bolder;
 }
 
 </style>
