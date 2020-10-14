@@ -1,8 +1,26 @@
 <template>
   <div id="app">
+    <aplayer autoplay mini :repeat="'repeat-one'"
+    :music="{
+      title: 'Background',
+      artist: 'Game',
+      src: 'https://bestian.github.io/basketball/happy.mp3'
+    }"
+    />
     <router-view/>
   </div>
 </template>
+
+<script>
+import Aplayer from 'vue-aplayer'
+
+export default {
+  name: 'App',
+  components: {
+    Aplayer
+  }
+}
+</script>
 
 <style>
 #app {
