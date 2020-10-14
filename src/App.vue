@@ -1,12 +1,14 @@
 <template>
   <div id="app">
-    <aplayer autoplay mini :repeat="'repeat-one'"
-    :music="{
-      title: 'Background',
-      artist: 'Game',
-      src: 'https://bestian.github.io/basketball/happy.mp3'
-    }"
-    />
+    <nav>
+      <aplayer autoplay mini :repeat="'repeat-one'"
+      :music="{
+        title: 'Background',
+        artist: 'Game',
+        src: 'https://bestian.github.io/basketball/happy.mp3'
+      }"
+      />
+    </nav>
     <router-view/>
   </div>
 </template>
@@ -31,16 +33,9 @@ export default {
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
+nav {
+  position: relative;
+  z-index: 999;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
