@@ -144,6 +144,7 @@ export default {
 
 #score {
   position: relative;
+  top: -0.6em;
   z-index: 9;
 }
 
