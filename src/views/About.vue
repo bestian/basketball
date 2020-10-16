@@ -1,5 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>怎麼玩？</h1>
+    <p>這是一個二人遊戲，輪流投籃</p>
   </div>
 </template>
